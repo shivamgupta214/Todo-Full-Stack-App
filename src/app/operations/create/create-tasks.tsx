@@ -17,10 +17,8 @@ const NewTaskForm: React.FC<NewTaskFormProps> = ({ onClose, isEditClicked, editT
     const [id, setId] = useState(0);
 
      const handleCreateTask = async (newTask: { title: string; color: string }) => {
-      console.log('this is task', newTask);
       try {
         const response = await axios.post('http://localhost:3001/create-tasks', newTask);
-        //fetchTasks(); 
         console.log('Task created successfully:', response.data);
       } catch (error) {
         console.error('Error creating task:', error);
