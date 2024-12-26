@@ -86,7 +86,7 @@ const TaskDetail = ({ onTaskClick, isEditClicked }: TaskDetailProps) => {
             
               <li 
                 key={task.id} 
-                className="flex items-center justify-between bg-[#262626] rounded-lg shadow-md p-4 w-full "
+                className="flex items-center justify-between bg-[#262626] border rounded-md shadow-md p-4 w-full"
                 
               >
                 <div className="flex items-center space-x-2">
@@ -108,7 +108,7 @@ const TaskDetail = ({ onTaskClick, isEditClicked }: TaskDetailProps) => {
                     {task.title}
                   </span>
                 </div>
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-2 mx-1">
                 <button
                     onClick={() => deleteTask(task.id)}
                     className="text-red-500 hover:text-red-700"
